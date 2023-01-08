@@ -49,7 +49,7 @@ class IauWeatherPageState extends State<IauWeatherPage> {
     return Container(
       decoration: const BoxDecoration(
         image: DecorationImage(
-          image: AssetImage("assets/images/app_background.jpeg"),
+          image: AssetImage("assets/images/app_background.jpg"),
           fit: BoxFit.cover,
         ),
       ),
