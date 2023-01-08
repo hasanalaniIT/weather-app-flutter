@@ -38,6 +38,7 @@ class IauWeatherPage extends StatefulWidget {
 
 class IauWeatherPageState extends State<IauWeatherPage> {
   final cityButtonController = TextEditingController();
+  final String _apiKey = "FQ6SSUYXWMPFSRFMWDJ5ND6JU";
   String weatherDegree = "";
   String weatherDescription = "";
   String cityName = "";
@@ -80,7 +81,7 @@ class IauWeatherPageState extends State<IauWeatherPage> {
                     try {
                       apiResponse = await http.get(
                         Uri.parse(
-                          'https://weather.visualcrossing.com/VisualCrossingWebServices/rest/services/timeline/$cityName?unitGroup=metric&include=current&key=FQ6SSUYXWMPFSRFMWDJ5ND6JU&contentType=json',
+                          'https://weather.visualcrossing.com/VisualCrossingWebServices/rest/services/timeline/$cityName?unitGroup=metric&include=current&key=$_apiKey&contentType=json',
                         ),
                       );
                       var weatherData = jsonDecode(apiResponse.body);
